@@ -57,7 +57,7 @@ def signup():
         'scopes': ','.join(config.get('scopes')),
     }
     url = generate_oauth_service().get_authorize_url(**params)
-    return redirect("own_uber_frontpage.html")
+    return render_template('own_uber_frontpage.html')
 
 
 @app.route('/submit', methods=['GET'])

@@ -17,7 +17,7 @@ end
       python.vm.network "private_network", ip: "192.168.10.100"
       python.hostsupdater.aliases = ["development.local"]
 
-      python.vm.synced_folder "Python_Sample_Application", "/home/ubuntu/Python-Sample_Application_master"
+      python.vm.synced_folder "Python-Sample-Application", "/home/ubuntu/Python-Sample-Application"
       python.vm.provision "chef_solo" do |chef|
         chef.arguments = "--chef-license accept"
         chef.add_recipe "python::default"
